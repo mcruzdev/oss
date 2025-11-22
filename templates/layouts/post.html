@@ -1,0 +1,66 @@
+---
+layout: default
+asciidoc-attributes:
+  notitle: true
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.DocumentPage page}
+
+<div class="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-12">
+  <!-- Post Header (full width) -->
+  <header class="mb-8">
+    <h1 class="text-5xl font-bold mb-4 text-dark-text">{page.title}</h1>
+    <div class="text-gray-500 text-sm mb-8">
+      <time datetime="{page.date}">{page.date.format('MM-dd-yyyy')}</time>
+      {#if page.data.author??} • <span>{page.data.author}</span>{/if}
+    </div>
+  </header>
+
+  <div class="post-layout-wrapper">
+    {#include partials/toc /}
+
+    <!-- Main Content Area -->
+    <article class="post-content-area">
+      <div class="article-content prose dark:prose-invert">
+        {#insert /}
+      </div>
+
+      <!-- Metadata Section -->
+      <div class="metadata-box mt-12">
+        <h3 class="metadata-title">Metadata</h3>
+
+        <div class="metadata-row">
+          <span class="metadata-label">Published</span>
+          <span class="metadata-value">{page.date.format('MM-dd-yyyy')}</span>
+        </div>
+
+        {#if page.data.tags}
+        <div class="metadata-row">
+          <span class="metadata-label">Tags</span>
+          <div class="metadata-tags">
+            {#for tag in page.data.tags.asStrings}
+            {#let tagSlug = tag.slugify}
+            <a href="{site.url('/posts/tag', tagSlug)}" class="tag-pill">&#35; {tagSlug}</a>
+            {/for}
+          </div>
+        </div>
+        {/if}
+      </div>
+
+      <footer class="mt-16 pt-8 border-t border-gray-800">
+        <div class="flex justify-between">
+          {#if page.previous}
+          <a href="{page.previous.url}" class="text-gray-400 hover:text-dark-text transition-colors">
+            ← {page.previous.title}
+          </a>
+          {/if}
+          {#if page.next}
+          <a href="{page.next.url}" class="text-gray-400 hover:text-dark-text transition-colors">
+            {page.next.title} →
+          </a>
+          {/if}
+        </div>
+      </footer>
+    </article>
+  </div>
+</div>
+

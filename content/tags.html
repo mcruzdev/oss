@@ -1,0 +1,11 @@
+---
+title: Tags
+---
+
+<div id="tags-list" class="flex flex-wrap gap-3 mb-12">
+  {#for tag in site.collections.posts.tagsCount}
+  <a href="{site.url('/posts/tag/')}{tag.name}" class="tag-badge">
+    {tag.name} <span class="tag-count">({tag.count})</span>
+  </a>
+  {/for}
+</div>
