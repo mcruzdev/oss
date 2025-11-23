@@ -13,21 +13,21 @@ Just another Static Site Generator? Well, I am not so sure - Roq is just a layer
 I’ve spent time looking at other SSGs in the JavaScript ecosystem (Gatsby, Next.js, Nuxt) and in other languages (Hugo, Jekyll, JBake…). Roq borrows many of their popular features and conventions.
 What really stands out, though, is that these SSGs have to re-implement most of the core building blocks inside their framework.
 With Quarkus, we already get almost everything we need out of the box — and that’s a key distinction:
-- Quarkus has Qute as Type-Safe template engine, guess what Roq too.
+- Quarkus has Qute as Type-Safe template engine, some sugar for Roq.
 - Roq Plugins and Themes are Quarkus extensions.
-- Quarkus allow to serve files statically and dynamically
+- Quarkus allow to serve files statically and dynamically.
 - CDI allows to bind everything together.
 - Quarkus extensions can be used with Roq, the most use-full is the Quarkus Web-Bundler (to bundle script, styles and web deps without any config).
 - Quarkus test framework.
 - And Quarkus Dev Mode 🥰 !
 
 Roq is a rock on top of Quarkus:
-- Allow to define data files (yml or json) and consume them in templates
-- Create endpoints for all your static site based on conventions (dir structure and Frontmatter data)
-- Provide plugins and themes
-- Add a command to export you Quarkus app as a static site
-- A GitHub Action for automation
-- Soon: A CMS to manage article and pages from the Quarkus Dev-UI
+- Create endpoints for all your static site based on conventions (dir structure and Frontmatter data).
+- Allow to define data files (yml or json) and consume them in templates.
+- Provide plugins and themes.
+- Add a command to export you Quarkus app as a static site.
+- A GitHub Action for automation.
+- Soon: A CMS to manage article and pages from the Quarkus Dev-UI.
 
 In this demo, we will install Quarkus and clone a repository, change a few things to see how it reacts.
 
@@ -83,7 +83,7 @@ quarkus dev
 
 When Quarkus is started. yeah... well... after downloading a bunch of dependencies for Tailwind and all (just the first time), press `w` on you keyboard and let the magic happen!
 
-I suggest you put your browser on your second screen if you have one, this content is also available in your new [blog](http://localhost:8080/posts/discover-roq-the-quarkus-way-for-static-site-generation-in-java/) (or in `content/posts/2025-01-02-demo.md)
+I suggest you put your browser on your second screen if you have one, this content is also available in your new [blog](http://localhost:8080/posts/discover-roq-the-quarkus-way-for-static-site-generation-in-java/) (or in `content/posts/2025-01-02-demo.md`)
 
 ## Episode 1 - The Index Page and Live-Reload
 
@@ -122,7 +122,7 @@ The content part is in html (because it a `.html` file), it is pretty straightfo
 
 ## Episode 2 - Web-Bundling 🏄
 
-The Quarkus Web Bundler, takes the `web/` dir stuff and use the [mvnpm](https://mvnpm.org/) dependencies, to create a production ready "bundle" for your page. `{#bundle /}` is included in the default layout and add the resulting script and style html tags.
+The Quarkus Web Bundler, takes the `web/` dir stuff and use the [mvnpm](https://mvnpm.org/) dependencies, to create a production ready "bundle" for your page. `\{#bundle /}` is included in the default layout and add the resulting script and style html tags.
 
 Let's give it a ride:
 
