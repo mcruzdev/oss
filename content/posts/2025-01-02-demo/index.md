@@ -47,8 +47,8 @@ curl -Ls https://sh.jbang.dev | bash -s - app install --fresh --force quarkus@qu
 I cooked a demo repo with Quarkus, Roq and Tailwind extensions in the pom.xml:
 ```shell
 # Clone the starter repo (or download):
-git clone ...
-cd ...
+git clone https://github.com/ia3andy/the-code-site.git
+cd the-code-site
 ```
 
 You should be all set for the whole journey 👌
