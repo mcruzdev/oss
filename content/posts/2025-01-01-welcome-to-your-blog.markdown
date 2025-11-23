@@ -3,26 +3,14 @@ title: "Welcome to Your New Blog!"
 date: 2025-01-01 10:00:00 +0000
 tags: [blogging, roq, getting-started]
 description: "Learn how to use this Roq blog template and start writing your own posts. This guide covers everything from basic formatting to advanced features."
-toc:
-  - id: getting-started
-    title: Getting Started
-  - id: markdown-formatting
-    title: Markdown Formatting
-    subsections:
-      - id: headings
-        title: Headings
-      - id: code-blocks
-        title: Code Blocks
-  - id: blog-features
-    title: Blog Features
-escape: true
+toc: true
 ---
 
 ## Getting Started
 
 Welcome! This is a sample post to help you get started with your new blog. You can edit or delete this post and start writing your own content.
 
-Posts are written in **Markdown**, a simple formatting language that's easy to learn. This post demonstrates various features you can use in your articles.
+Posts are written in **Markdown** (or [Asciidoc](https://iamroq.com/docs/plugins/#plugin-asciidoc)), a simple formatting language that's easy to learn. This post demonstrates various features you can use in your articles.
 
 ## Markdown Formatting
 
@@ -62,7 +50,7 @@ Code blocks use triple backticks:
 
 ```javascript
 function greet(name) {
-  console.log(`Hello, ${name}!`);
+  console.log(`Hello, $\{name}!`);
 }
 
 greet('World');
@@ -100,17 +88,7 @@ The `excerpt` in the front matter appears in article lists and meta descriptions
 
 ### Table of Contents
 
-Notice the TOC at the top? It's generated from the `toc` section in the front matter. Each heading needs an `{#id}` anchor.
-
-### Social Sharing
-
-At the bottom of this post, you'll find sharing buttons for:
-- Twitter/X
-- LinkedIn
-- Facebook
-- Reddit
-- Telegram
-- Copy Link
+Notice the TOC at the top? It's generated from the `toc` section in the front matter or automatically if `toc: true`. 
 
 ### Previous/Next Navigation
 
@@ -118,8 +96,8 @@ Navigation links to previous and next posts appear at the bottom of each article
 
 ## Writing Your First Post
 
-1. **Create a new file** in `_posts/` directory
-2. **Name it** following the format: `YYYY-MM-DD-title.markdown`
+1. **Create a new file** in `posts/` directory
+2. **Name it** following the format: `YYYY-MM-DD-title.md`
 3. **Add front matter** (see below)
 4. **Write your content** in Markdown
 
@@ -131,7 +109,7 @@ layout: post
 title: "Your Post Title"
 date: 2025-01-15 10:00:00 +0000
 tags: [tag1, tag2, tag3]
-excerpt: "Brief description for previews"
+description: "Brief description for previews"
 ---
 ```
 
@@ -148,9 +126,8 @@ excerpt: "Brief description for previews"
 ## Next Steps
 
 - Delete this sample post
-- Delete or update the sample posts in `_posts/`
-- Update sample projects in `_projects/`
-- Customize your `about.markdown` page
+- Delete or update the sample posts in `posts/`
+- Customize your `about.md` page
 - Write your first real post!
 
 ## Resources
@@ -158,7 +135,6 @@ excerpt: "Brief description for previews"
 - [Markdown Guide](https://www.markdownguide.org/)
 - [Roq Documentation](https://iamroq.com/docs/)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Font Awesome Icons](https://fontawesome.com/icons)
 
 Happy blogging! 🎉
 
