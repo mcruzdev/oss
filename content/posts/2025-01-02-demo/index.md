@@ -1,7 +1,7 @@
 ---
 title: "Discover Roq, the Quarkus Way for Static Site Generation in Java"
 description: >-
-  Did you know about Roq? A powerful new tool that combines Java and Quarkus. Prep a warm drink and put on some soft music! I will show you why Roq is so cool with the comfort of Quarkus Dev Mode and all its eco-system.
+  Did you know about Roq? A powerful new tool that combines Java and Quarkus. Prep a warm drink and put on some soft music! let's find outwhy Roq is so cool with the comfort of Quarkus Dev Mode and all its eco-system.
 tags: demo, code, java
 toc: true
 ---
