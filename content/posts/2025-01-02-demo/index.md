@@ -16,7 +16,7 @@ With Quarkus, we already get almost everything we need out of the box — and th
 - Quarkus has Qute as Type-Safe template engine, some sugar for Roq.
 - Roq Plugins and Themes are Quarkus extensions.
 - Quarkus allow to serve files statically and dynamically.
-- CDI allows to bind everything together.
+- CDI allows to extend and bind data and templates together.
 - Quarkus extensions can be used with Roq, the most use-full is the Quarkus Web-Bundler (to bundle script, styles and web deps without any config).
 - Quarkus test framework.
 - And Quarkus Dev Mode 🥰 !
@@ -210,10 +210,9 @@ items:
 
 👀 **›** _Congratulation, you didn't change a thing 😅_
 
-**Tip** You can also [map this data to a structure](https://docs.quarkiverse.io/quarkus-roq/dev/quarkus-roq-data.html) (class or record) for type-safety and making sure your data is meeting expectations.
+**Tip** You can also [map this data to a structure](https://docs.quarkiverse.io/quarkus-roq/dev/quarkus-roq-data.html) (Java class or record) for type-safety and making sure your data is meeting expectations.
 
-
-## 🥱 Episode 5 - Templates: Layouts, Partials and Tags
+## 🥱 Episode 5 - Templates: Layouts, Partials, Tags and Extensions
 
 This is a bit boring but important to know.
 
@@ -221,9 +220,18 @@ Layouts let you share and reuse parts of the HTML around your content — header
 
 ![roq-layouts.png](roq-layouts.png)
 
+🏻‍💻 **›** **In `templates/layouts/default.html` replace the `{#insert /}` this in the `<main>` by this:**
+```html
+<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">One template to rule them all 💍</h1>
+```
+
+👀 **›** _All pages in the site is now showing this message_
+
 Partials (located in `templates/partials/`) let you reuse small HTML/Qute snippets—like a header, a footer, a card, a pagination block, or a meta block. Instead of repeating the same HTML everywhere, you include them with `\{#include partials/… /}`, keeping layouts and pages clean and consistent.
 
 Tags (located in `templates/tags/`) are small, self-contained components you can call from any template. They behave like mini-templates with parameters, useful for things like buttons, cards, or repeated UI fragments. You invoke them using Qute’s `\{#your-tag foo="bar"}` syntax, and they keep your templates much cleaner by replacing boilerplate HTML with a reusable tag definition.
+
+`@TemplateExtension` [methods](https://quarkus.io/guides/qute-reference#template_extension_methods) can be used to extend the data classes with new functionality from Java (to extend the set of accessible properties and methods). For example, it is possible to add computed properties and virtual methods.
 
 ## 🔥 Episode 6 - Themes
 
@@ -236,7 +244,8 @@ You can also create your own. The process is very similar to what we’ve seen i
 
 ## Conclusion
 
-I hope you enjoyed the demo and consider using Roq for your next site.  
+I hope you enjoyed the demo and consider using Roq for your next site, if you want to give your support, a star on GitHub will show me:
+<a class="github-button" href="https://github.com/quarkiverse/quarkus-roq" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star quarkiverse/quarkus-roq on GitHub">Star</a>
 
 The Roq [users](https://iamroq.com/roqers/) and [community](https://github.com/quarkiverse/quarkus-roq?tab=readme-ov-file#contributors-) are growing, and I hope to see you there soon 🚀.
 
