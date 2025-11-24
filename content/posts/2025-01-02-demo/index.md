@@ -1,9 +1,10 @@
 ---
 title: "Discover Roq, the Quarkus Way for Static Site Generation in Java"
 description: >-
-  Did you know about Roq? A powerful new tool that combines Java and Quarkus. Prep a warm drink and put on some soft music! let's find outwhy Roq is so cool with the comfort of Quarkus Dev Mode and all its eco-system.
+  Did you know about Roq? A powerful new tool that combines Java and Quarkus. Ok, prep a warm drink and put on some soft music and let's find out why Roq is so cool with the comfort of Quarkus Dev Mode and all its eco-system. Bonus: a touch of TailwindCss to make it look great!
 tags: demo, code, java
 toc: true
+escape: true
 ---
 
 ![roq-advent.png](./roq-advent.png)
@@ -34,8 +35,8 @@ In this demo, we will install Quarkus and clone a repository, change a few thing
 
 ## Setup
 
-Make sure you have the JDK 17+ on your machine and install the [Quarkus CLI](https://quarkus.io/guides/cli-tooling) to makes things smoother:
-```
+Make sure you have the JDK 17+ on your machine and install the [Quarkus CLI](https://quarkus.io/guides/cli-tooling) using the command bellow:
+```shell
 curl -Ls https://sh.jbang.dev | bash -s - trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/
 curl -Ls https://sh.jbang.dev | bash -s - app install --fresh --force quarkus@quarkusio
 ```
@@ -77,7 +78,7 @@ the-coder-site/
 ```
 
 Let's start Quarkus Dev-Mode:
-```
+```shell
 quarkus dev
 ```
 
@@ -122,7 +123,7 @@ The content part is in html (because it a `.html` file), it is pretty straightfo
 
 ## 🏄 Episode 2 - Web-Bundling
 
-The Quarkus Web Bundler, takes the `web/` dir stuff and use the [mvnpm](https://mvnpm.org/) dependencies, to create a production ready "bundle" for your page. `\{#bundle /}` is included in the default layout and add the resulting script and style html tags.
+The Quarkus Web Bundler, takes the `web/` dir stuff and use the [mvnpm](https://mvnpm.org/) dependencies, to create a production ready "bundle" for your page. `{#bundle /}` is included in the default layout and add the resulting script and style html tags.
 
 Let's give it a ride:
 
@@ -204,8 +205,8 @@ items:
 🏻‍💻 **›** **In `templates/partials/header.html` change this:**
 
 ```
-- \{#for item in site.data.navigation}
-+ \{#for item in cdi:navigation.items}
+- {#for item in site.data.navigation}
++ {#for item in cdi:navigation.items}
 ```
 
 👀 **›** _Congratulation, you didn't change a thing 😅_
@@ -227,9 +228,9 @@ Layouts let you share and reuse parts of the HTML around your content — header
 
 👀 **›** _All pages in the site is now showing this message_
 
-Partials (located in `templates/partials/`) let you reuse small HTML/Qute snippets—like a header, a footer, a card, a pagination block, or a meta block. Instead of repeating the same HTML everywhere, you include them with `\{#include partials/… /}`, keeping layouts and pages clean and consistent.
+Partials (located in `templates/partials/`) let you reuse small HTML/Qute snippets—like a header, a footer, a card, a pagination block, or a meta block. Instead of repeating the same HTML everywhere, you include them with `{#include partials/… /}`, keeping layouts and pages clean and consistent.
 
-Tags (located in `templates/tags/`) are small, self-contained components you can call from any template. They behave like mini-templates with parameters, useful for things like buttons, cards, or repeated UI fragments. You invoke them using Qute’s `\{#your-tag foo="bar"}` syntax, and they keep your templates much cleaner by replacing boilerplate HTML with a reusable tag definition.
+Tags (located in `templates/tags/`) are small, self-contained components you can call from any template. They behave like mini-templates with parameters, useful for things like buttons, cards, or repeated UI fragments. You invoke them using Qute’s `{#your-tag foo="bar"}` syntax, and they keep your templates much cleaner by replacing boilerplate HTML with a reusable tag definition.
 
 `@TemplateExtension` [methods](https://quarkus.io/guides/qute-reference#template_extension_methods) can be used to extend the data classes with new functionality from Java (to extend the set of accessible properties and methods). For example, it is possible to add computed properties and virtual methods.
 
@@ -252,17 +253,3 @@ The Roq [users](https://iamroq.com/roqers/) and [community](https://github.com/q
 Plenty of new things are coming in the next few months — a CMS, i18n for collections, a dead-link checker, an mkdocs theme, and more.
 
 If you spot issues, have ideas for cool features, or want to contribute, you’re more than welcome ❤️
-
-
-
-
-
-
-
-
-
-
-
-
-
-
