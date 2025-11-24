@@ -3,7 +3,6 @@
 // ============================================
 (function() {
     'use strict';
-    console.log("foo");
     function updateThemeIcons(theme) {
         const sunIcons = document.querySelectorAll('.toggle-light');
         const moonIcons = document.querySelectorAll('.toggle-dark');
