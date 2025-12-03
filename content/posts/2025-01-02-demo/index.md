@@ -245,7 +245,9 @@ You can also create your own. The process is very similar to what we’ve seen i
 
 ## Conclusion
 
-I hope you enjoyed the demo and consider using Roq for your next site, if you want to give your support, a star on GitHub will show me:
+I hope you enjoyed the demo and consider using Roq for your next site. If you want to show your support, give Roq a star on GitHub:
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <a class="github-button" href="https://github.com/quarkiverse/quarkus-roq" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star quarkiverse/quarkus-roq on GitHub">Star</a>
 
 The Roq [users](https://iamroq.com/roqers/) and [community](https://github.com/quarkiverse/quarkus-roq?tab=readme-ov-file#contributors-) are growing, and I hope to see you there soon 🚀.
