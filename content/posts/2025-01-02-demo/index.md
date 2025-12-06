@@ -9,7 +9,7 @@ escape: true
 
 ![roq-advent.png](./roq-advent.png)
 
-Just another Static Site Generator? Well, I am not so sure - Roq is just a layer on top of Quarkus leveraging its whole ecosystem.
+Just another Static Site Generator? Honestly, yes — but Roq is a little different. It’s just a thin layer on Quarkus, which gives it a different kind of potential.
 
 I’ve spent time looking at other SSGs in the JavaScript ecosystem (Gatsby, Next.js, Nuxt) and in other languages (Hugo, Jekyll, JBake…). Roq borrows many of their popular features and conventions.
 What really stands out, though, is that these SSGs have to re-implement most of the core building blocks inside their framework.
@@ -82,7 +82,7 @@ Let's start Quarkus Dev-Mode:
 quarkus dev
 ```
 
-When Quarkus is started. yeah... well... after downloading a bunch of dependencies for Tailwind and all (just the first time), press `w` on you keyboard and let the magic happen!
+When Quarkus starts — after the initial download of its dependencies. press `w` on you keyboard and let the magic happen!
 
 I suggest you put your browser on your second screen if you have one, this content is also available in your new [blog](http://localhost:8080/posts/discover-roq-the-quarkus-way-for-static-site-generation-in-java/) (or in `content/posts/2025-01-02-demo.md`)
 
