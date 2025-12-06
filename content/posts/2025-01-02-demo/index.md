@@ -9,7 +9,7 @@ escape: true
 
 ![roq-advent.png](./roq-advent.png)
 
-Just another Static Site Generator? Honestly, yes — but Roq is a little different. It’s just a thin layer on Quarkus, which gives it a different kind of potential.
+Just another Static Site Generator (SSG)? Honestly, yes — but Roq is a little different. It’s just a thin layer on Quarkus, which gives it a different kind of potential.
 
 I’ve spent time looking at other SSGs in the JavaScript ecosystem (Gatsby, Next.js, Nuxt) and in other languages (Hugo, Jekyll, JBake…). Roq borrows many of their popular features and conventions.
 What really stands out, though, is that these SSGs have to re-implement most of the core building blocks inside their framework.
@@ -241,6 +241,13 @@ If you create a [Roq app](https://code.quarkus.io/?a=roq-with-blog&e=io.quarkive
 [Roq themes](https://iamroq.com/docs/themes/) are deeply overridable, letting you replace or extend only what you need while keeping the rest intact. This keeps your project focused on the content, not the design system. Whenever you want to adjust a layout, change a component, or tweak the styling, you simply override that part in your project, and the rest of the theme continues to work seamlessly.
 
 You can also create your own. The process is very similar to what we’ve seen in this demo: you define your layouts, templates, components, and styles, and Roq takes care of wiring everything together. This gives you full freedom to shape the look and feel of your site while still benefiting from Roq’s structure and conventions.
+
+
+## 🗿 Season Finale – Publishing
+
+Up to this point, you haven’t actually generated anything — you’ve just been using Quarkus to build and render your app. Add a Java service, plug in a database with Quarkus extensions, and it works fine. That’s a different path, though, because you’ll need a server to run it.
+
+For static site generation, you only need static files to run on a static server. Roq makes this simple by providing a command for your CI or a GitHub Action. Learn more about publishing with Roq [here](https://iamroq.com/docs/publishing/).
 
 
 ## Conclusion
