@@ -12,7 +12,9 @@ escape: true
 Just another Static Site Generator (SSG)? Honestly, yes — but Roq is a little different. It’s just a thin layer on Quarkus, which gives it a different kind of potential.
 
 I’ve spent time looking at other SSGs in the JavaScript ecosystem (Gatsby, Next.js, Nuxt) and in other languages (Hugo, Jekyll, JBake…). Roq borrows many of their popular features and conventions.
+
 What really stands out, though, is that these SSGs have to re-implement most of the core building blocks inside their framework.
+
 With Quarkus, we already get almost everything we need out of the box — and that’s a key distinction:
 - Quarkus has Qute as Type-Safe template engine, some sugar for Roq.
 - Roq Plugins and Themes are Quarkus extensions.
