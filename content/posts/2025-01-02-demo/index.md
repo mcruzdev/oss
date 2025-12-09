@@ -115,7 +115,7 @@ paginate: posts
 
 👩🏻‍💻 **›** **Change the `title:` with your name**
 
-👀 **›** _Switch to the browser and see the change, Live reload should be real quick._
+👀 **›** _Switch to the browser and see the change (at the top), Live reload should be real quick._
 
 The `layout: default` is the template which will wrap this page content, they are defined in `template/layouts/` but we will see that later.
 
