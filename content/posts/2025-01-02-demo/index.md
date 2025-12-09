@@ -117,8 +117,6 @@ paginate: posts
 
 👀 **›** _Switch to the browser and see the change, Live reload should be real quick._
 
-**Note**: Styles and script changes are way faster to be loaded, I am currently working on making the page changes way faster too.
-
 The `layout: default` is the template which will wrap this page content, they are defined in `template/layouts/` but we will see that later.
 
 The content part is in html (because it a `.html` file), it is pretty straightforward. You can see how pagination on posts happens.
